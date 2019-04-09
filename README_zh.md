@@ -2,7 +2,7 @@
 
 Lancet 是一个轻量级Android AOP框架。
 
-+ 编译速度快, 并且支持增量编译.
++ 编译速度快, 并且支持增量编译（1.1.0起不再支持增量）.
 + 简洁的 API, 几行 Java 代码完成注入需求.
 + 没有任何多余代码插入 apk.
 + 支持用于 SDK, 可以在SDK编写注入代码来修改依赖SDK的App.
@@ -13,7 +13,7 @@ Lancet 是一个轻量级Android AOP框架。
 在根目录的 `build.gradle` 添加:
 ```groovy
 dependencies{
-    classpath 'me.ele:lancet-plugin:1.0.4'
+    classpath 'me.ele:lancet-plugin:1.1.0'
 }
 ```
 在 app 目录的'build.gradle' 添加：
@@ -21,7 +21,7 @@ dependencies{
 apply plugin: 'me.ele.lancet'
 
 dependencies {
-    provided 'me.ele:lancet-base:1.0.4'
+    compileOnly 'me.ele:lancet-base:1.1.0'
 }
 ```
 

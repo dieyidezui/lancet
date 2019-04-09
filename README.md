@@ -4,7 +4,7 @@
 
 Lancet is a lightweight AOP framework for Android.
 
-It's fast and just take up a little time during compiling. Also, it supports incremental compiling.
+It's fast and just take up a little time during compiling. Also, it supports incremental compiling(closed since 1.1.0).
 
 But it provides great api to help you coding in Android.
 
@@ -19,7 +19,7 @@ Firstly, add following code in root **build.gradle** of your project.
 
 ```groovy
 dependencies{
-    classpath 'me.ele:lancet-plugin:1.0.4'
+    classpath 'me.ele:lancet-plugin:1.1.0'
 }
 ```
 And then, add following code in your **application module's build.gradle**
@@ -28,7 +28,7 @@ And then, add following code in your **application module's build.gradle**
 apply plugin: 'me.ele.lancet'
 
 dependencies {
-    provided 'me.ele:lancet-base:1.0.4'
+    compileOnly 'me.ele:lancet-plugin:1.1.0'
 }
 ```
 
