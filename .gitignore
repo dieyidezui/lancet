@@ -15,8 +15,10 @@ release.properties
 # Idea
 .idea
 obj
+*.iml
 #MacOS
 .DS_Store
 local.properties
+publish.gradle
 lancet-weaver/src/test/sample/class/
 lancet-weaver/src/test/sample/product/
