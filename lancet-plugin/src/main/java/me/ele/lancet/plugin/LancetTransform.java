@@ -70,25 +70,7 @@ class LancetTransform extends Transform {
 
     @Override
     public boolean isIncremental() {
-        return true;
-    }
-
-
-    /**
-     * @return Hook classes we found in last compilation. If they has been changed,gradle will auto go full compile.
-     */
-    @Override
-    public Collection<SecondaryFile> getSecondaryFiles() {
-        return cache.hookClassesInDir()
-                .stream()
-                .map(File::new)
-                .map(SecondaryFile::nonIncremental)
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public Collection<File> getSecondaryDirectoryOutputs() {
-        return Collections.singletonList(global.getLancetDir());
+        return false;
     }
 
     @Override
@@ -103,7 +85,7 @@ class LancetTransform extends Transform {
         Log.i("after android plugin, incremental: " + context.isIncremental());
         Log.i("now: " + System.currentTimeMillis());
 
-        boolean incremental = lancetExtension.getIncremental();
+        boolean incremental = false;
 
         PreClassAnalysis preClassAnalysis = new PreClassAnalysis(cache);
 

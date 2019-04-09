@@ -1,8 +1,9 @@
 buildscript {
     ext {
         lancet_group = 'me.ele'
-        android_tools_version = "2.3.2"
-        lancet_version = '1.1.0-SNAPSHOT'
+        lancet_version = '1.1.0'
+        android_tools_version = "3.3.2"
+        asm_version = "6.0"
     }
     repositories {
         jcenter()

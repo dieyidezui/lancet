@@ -8,7 +8,6 @@ dependencies {
     compileClasspath "com.android.tools.build:gradle:$android_tools_version"
     compile project(':lancet-base')
     compile gradleApi()
-    compileClasspath "com.google.guava:guava:$guava_version"
     compile "org.ow2.asm:asm-all:$asm_version"
 }
 

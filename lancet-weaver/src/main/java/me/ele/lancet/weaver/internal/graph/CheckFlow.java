@@ -16,17 +16,17 @@ public class CheckFlow {
     public Map<String, FlowEntity> map = new HashMap<>();
 
     public void add(Graph graph, String className, Scope scope) {
-        Node node = graph.get(className);
-        if (node != null && !map.containsKey(className)) {
-            map.put(className, new FlowEntity(node.toFlowNode(scope)));
-        }
+//        Node node = graph.get(className);
+//        if (node != null && !map.containsKey(className)) {
+//            map.put(className, new FlowEntity(node.toFlowNode(scope)));
+//        }
     }
 
     public void exactlyMatch(String className) {
-        FlowEntity entity = map.get(className);
-        if (entity != null) {
-            entity.exactMatch = true;
-        }
+//        FlowEntity entity = map.get(className);
+//        if (entity != null) {
+//            entity.exactMatch = true;
+//        }
     }
 
     public boolean isIncremental(Graph graph) {

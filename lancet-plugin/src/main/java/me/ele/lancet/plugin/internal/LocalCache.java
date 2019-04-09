@@ -80,14 +80,14 @@ public class LocalCache {
     }
 
     public void saveToLocal() {
-        try {
-            Files.createParentDirs(localCache);
-            Writer writer = Files.newWriter(localCache, Charsets.UTF_8);
-            gson.toJson(metas.withoutNull(), Metas.class, writer);
-            writer.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Files.createParentDirs(localCache);
+//            Writer writer = Files.newWriter(localCache, Charsets.UTF_8);
+//            gson.toJson(metas.withoutNull(), Metas.class, writer);
+//            writer.close();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 
     public void clear() throws IOException {
